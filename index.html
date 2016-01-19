@@ -5,7 +5,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" src="css/styles.css">
 </head>
-<body>
+<body ng-app="demo">
 	<div class="container">
 		<header>
 			<div id="face">
@@ -15,36 +15,36 @@
 				<img src="img/ng-mad-libs-logo.png" alt="MadLibs Banner" />
 			</div>
 		</header>
-		<section id="wordSelect" ng-app="demo">
+		<section id="wordSelect">
 			<h1>Provide the following words:</h1>
 			<div>
 				<div>
 					<ul>
-						<li ng-model="male name"></li>
-						<li ng-model="job title"></li>
-						<li ng-model="tedious task"></li>
+						<li><input type="text" ng-model="male_name"></li>
+						<li><input type="text" ng-model="job_title"></li>
+						<li><input type="text" ng-model="tedious_task"></li>
 					</ul>
 				</div>
 				<div>
 					<ul>
-						<li ng-model="dirty task"></li>
-						<li ng-model="celebrity"></li>
-						<li ng-model="useless skill"></li>
+						<li><input type="text" ng-model="dirty_task"></li>
+						<li><input type="text" ng-model="celebrity"></li>
+						<li><input type="text" ng-model="useless_skill"></li>
 					</ul>
 				</div>	
 				<div>
 					<ul>
-						<li ng-model="obnoxious celebrity"></li>
-						<li ng-model="huge number"></li>
-						<li ng-model="adjective"></li>
+						<li><input type="text" ng-model="obnoxious_celebrity"></li>
+						<li><input type="text" ng-model="huge_number"></li>
+						<li><input type="text" ng-model="adjective"></li>
 					</ul>
 				</div>	
 			</div>
 		</section>
 		<section id="madLibsStory">
-			<p>{{ female name }} was a {{ job title }} who loved technology. Although she loved parts of her job, she absolutely hated  {{ tedious task} } and {{ dirty task }}. So, {{ female_name }} met with her life mentor {{ celebrity }} who told her to learn how to {{ useless skill }} with Thinkful. Thinkful didn't offer a course on {{ useless skill }} so she studied programming instead.</p> 
+			<p>{{ female_name }} was a {{ job_title }} who loved technology. Although she loved parts of her job, she absolutely hated  {{ tedious_task} } and {{ dirty_task }}. So, {{ female_name }} met with her life mentor {{ celebrity }} who told her to learn how to {{ useless_skill }} with Thinkful. Thinkful didn't offer a course on {{ useless_skill }} so she studied programming instead.</p> 
  
-			<p>What a great decision! With her new skills, {{ female name }} built a(n) {{ adjective }} robot named {{ obnoxiuous celbertity }} that not only loved {{ dirty task }} but did it {{ huge number }} faster.</p>
+			<p>What a great decision! With her new skills, {{ female_name }} built a(n) {{ adjective }} robot named {{ obnoxiuous_celbertity }} that not only loved {{ dirty_task }} but did it {{ huge_number }} faster.</p>
 		</section>
 	</div>
 </body>
