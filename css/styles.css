@@ -3,11 +3,89 @@ body {
 }
 
 .container {
-	border: 2px solid #000;
-	padding: 20px;
+	border: 2px solid #333;
+	padding: 0px;
+	width: 700px;
+	height: 850px;
+	margin: 0px auto;
+	margin-top: 40px;
 }
 
 section {
+	padding: 40px;
+	border-top: 2px solid #ccc;
+}
+
+ul li {
+	list-style-type: none;
+	margin: 10px 0;
+}
+
+ul {
+	padding: 0;
+}
+
+#face img{
+	width: 45%;
+}
+
+h1 {
+	margin-top: 5px;
+}
+
+h2 {
+	margin-top: 5px;
+}
+
+#face {
+	padding-top: 10px;
+	border-right: 2px solid #ccc;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	height: 100px;
+	box-sizing: border-box;
+}
+
+#banner {
+	padding: 0px;
+	border: none;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	height: 100px;
+	box-sizing: border-box;
+}
+
+#banner img{
+	width: 40%;
+}
+
+.grid-container {
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+
+.grid-column {
+	width: 32%;
+	display: inline-block;
+}
+
+.grid-column2 {
+	width: 25%;
+	display: inline-block;
+}
+
+.grid-column3 {
+	width: 74%;
+	display: inline-block;
+}
+
+#madLibsStory {
+	padding: 10px 40px;
+}
+
+#madLibsStory p{
 	padding: 10px;
-	border-top: 2px solid #000;
 }
