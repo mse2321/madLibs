@@ -88,5 +88,19 @@ h2 {
 }
 
 #madLibsStory p{
-	padding: 10px;
+	padding: 0px;
+	line-height: 45px;
+	letter-spacing: 0.02em;
+}
+
+#madLibsStory span{
+	border-bottom: 1px solid #000;
+	min-width: 100px;
+	background-color: #eee;
+	display: inline-block;
+	height: 24px;
+	padding-bottom: 5px;
+	vertical-align: middle;
+    text-align: center;
+    line-height: 30px;
 }
