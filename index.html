@@ -13,6 +13,7 @@ h2 { margin-top: 5px; }
 .container { border: 2px solid #333; padding: 0px; width: 700px; height: 550px; margin: 0px auto; margin-top: 40px; }
 .hidden { display: none; }
 .show { display: block; }
+.error {color: red; border: 1px solid red;}
 #face { padding-top: 10px; border-right: 2px solid #ccc; display: inline-block; text-align: center; vertical-align: top; height: 100px; box-sizing: border-box; }
 #face img { width: 45%; }
 #banner { padding: 0px; border: none; display: inline-block; text-align: center; vertical-align: top; height: 100px; box-sizing: border-box; }
@@ -72,36 +73,38 @@ h2 { margin-top: 5px; }
 				</header>
 				<section id="wordSelect" class="{{ words_ui }}">
 						<h2>Provide the following words:</h2>
-						<div class="grid_container">
-								<div class="grid_column">
+						<form name="mad_libs_form">
+							<div class="grid_container">
+									<div class="grid_column">
 										<ul>
-												<li>Male: <input type="radio" ng-model="gender_type" value="male name"> Female: <input type="radio" ng-model="gender_type" ng-change="change()" value="female name"></li>
-												<li>Name: <input type="text" ng-model="name" placeholder="{{ gender_type }}" value="&nbsp;"></li>
-												<li>Job Title: <input type="text" ng-model="job_title" placeholder="Job Title" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
-												<li>Tedious Task: <input type="text" ng-model="tedious_task" placeholder="Tedious Task" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
+											<li>Male: <input type="radio" ng-model="gender_type" value="male name"> Female: <input type="radio" ng-model="gender_type" ng-change="change()" value="female name"></li>
+											<li>Name: <input type="text" ng-model="name" placeholder="{{ gender_type }}" value="&nbsp;"></li>
+											<li>Job Title: <input type="text" ng-model="job_title" placeholder="Job Title" value="&nbsp;" ng-pattern="/[a-z]/" required></li>
+											<li>Tedious Task: <input type="text" ng-model="tedious_task" placeholder="Tedious Task" value="&nbsp;" ng-pattern="/[a-z]/" required></li>
 										</ul>
-								</div><!-- grid_column -->
-								<div class="grid_column">
+									</div><!-- grid_column -->
+									<div class="grid_column">
 										<ul>
-												<li>Dirty Task: <input type="text" ng-model="dirty_task" placeholder="Dirty Task" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
-												<li>Celebrity: <input type="text" ng-model="celebrity" placeholder="Celebrity" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
-												<li>Useless Skill: <input type="text" ng-model="useless_skill" placeholder="Useless Skill" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
+											<li>Dirty Task: <input type="text" ng-model="dirty_task" placeholder="Dirty Task" value="&nbsp;" ng-pattern="/[a-z]/" required></li>
+											<li>Celebrity: <input type="text" ng-model="celebrity" placeholder="Celebrity" value="&nbsp;" ng-pattern="/[a-z]/"  required></li>
+											<li>Useless Skill: <input type="text" ng-model="useless_skill" placeholder="Useless Skill" value="&nbsp;" ng-pattern="/[a-z]/" required></li>
 										</ul>
-								</div><!-- grid_column -->
-								<div class="grid_column">
+									</div><!-- grid_column -->
+									<div class="grid_column">
 										<ul>
-												<li>Obnoxious Celebrity: <input type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
-												<li>Huge Number: <input type="number" ng-model="huge_number" placeholder="Huge Number" value="&nbsp;" ></li>
-												<li>Adjective: <input type="text" ng-model="adjective" placeholder="Adjective" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
+											<li>Obnoxious Celebrity: <input type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" value="&nbsp;" ng-pattern="/[a-z]/" required></li>
+											<li>Huge Number: <input type="number" ng-model="huge_number" placeholder="Huge Number" value="&nbsp;" required></li>
+											<li>Adjective: <input type="text" ng-model="adjective" placeholder="Adjective" value="&nbsp;" ng-pattern="/[a-z]/" required></li>
 										</ul>
-								</div><!-- grid_column -->
-						</div><!-- grid_container -->
-						<button class="word_select_button" ng-click="submit()">Generate My Mad Lib</button>
+									</div><!-- grid_column -->
+							</div><!-- grid_container -->
+							<button class="word_select_button" ng-click="submit()">Generate My Mad Lib</button>
+						</form>
 				</section> <!-- Word Select -->
 				<section id="madLibsStory" class="{{ madlibs_ui }}">
 						<p><span>{{ name }}</span> was a <span>{{ job_title }}</span> who loved technology. Although {{ pronoun }} loved parts of {{ possess_pronoun }} job, she absolutely hated  <span>{{ tedious_task }}</span> and <span>{{ dirty_task }}</span>. So, <span>{{ name }}</span> met with {{ possess_pronoun }} life mentor <span>{{ celebrity }}</span> who told {{ possess_pronoun }} to learn how to <span>{{ useless_skill }}</span> with Thinkful. Thinkful didn't offer a course on <span>{{ useless_skill }}</span> so {{ pronoun }} studied programming instead.</p> 
  
-						<p>What a great decision! With {{ possess_pronoun }} new skills, <span>{{ name }}</span> built a(n) <span>{{ adjective }}</span> robot named <span>{{ obnoxious_celebrity }}</span> that not only loved <span>{{ dirty_task }}</span> but did it <span>{{ huge_number }}</span> faster.</p>
+						<p>What a great decision! With {{ possess_pronoun }} new skills, <span>{{ name }}</span> built a(n) <span>{{ adjective }}</span> robot named <span>{{ obnoxious_celebrity }}</span> that not only loved <span>{{ dirty_task }}</span> but did it <span>{{ huge_number }}</span> times faster.</p>
 						<button id="start_over" class="madlib_button" ng-click="start_over()">Start Over</button>
 				</section> <!-- madLibStory -->
 		</div><!-- container -->
