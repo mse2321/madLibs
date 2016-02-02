@@ -77,22 +77,22 @@ h2 { margin-top: 5px; }
 										<ul>
 												<li>Male: <input type="radio" ng-model="gender_type" value="male name"> Female: <input type="radio" ng-model="gender_type" ng-change="change()" value="female name"></li>
 												<li>Name: <input type="text" ng-model="name" placeholder="{{ gender_type }}" value="&nbsp;"></li>
-												<li>Job Title: <input type="text" ng-model="job_title" placeholder="Job Title" value="&nbsp;" ng-pattern="/^a-z/" ></li>
-												<li>Tedious Task: <input type="text" ng-model="tedious_task" placeholder="Tedious Task" value="&nbsp;" ng-pattern="/^a-z/" ></li>
+												<li>Job Title: <input type="text" ng-model="job_title" placeholder="Job Title" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
+												<li>Tedious Task: <input type="text" ng-model="tedious_task" placeholder="Tedious Task" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
 										</ul>
 								</div><!-- grid_column -->
 								<div class="grid_column">
 										<ul>
-												<li>Dirty Task: <input type="text" ng-model="dirty_task" placeholder="Dirty Task" value="&nbsp;" ng-pattern="/^a-z/" ></li>
-												<li>Celebrity: <input type="text" ng-model="celebrity" placeholder="Celebrity" value="&nbsp;" ng-pattern="/^a-z/" ></li>
-												<li>Useless Skill: <input type="text" ng-model="useless_skill" placeholder="Useless Skill" value="&nbsp;" ng-pattern="/^a-z/" ></li>
+												<li>Dirty Task: <input type="text" ng-model="dirty_task" placeholder="Dirty Task" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
+												<li>Celebrity: <input type="text" ng-model="celebrity" placeholder="Celebrity" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
+												<li>Useless Skill: <input type="text" ng-model="useless_skill" placeholder="Useless Skill" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
 										</ul>
 								</div><!-- grid_column -->
 								<div class="grid_column">
 										<ul>
-												<li>Obnoxious Celebrity: <input type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" value="&nbsp;" ng-pattern="/^a-z/" ></li>
+												<li>Obnoxious Celebrity: <input type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
 												<li>Huge Number: <input type="number" ng-model="huge_number" placeholder="Huge Number" value="&nbsp;" ></li>
-												<li>Adjective: <input type="text" ng-model="adjective" placeholder="Adjective" value="&nbsp;" ng-pattern="/^a-z/" ></li>
+												<li>Adjective: <input type="text" ng-model="adjective" placeholder="Adjective" value="&nbsp;" ng-pattern="/[a-z]/" ></li>
 										</ul>
 								</div><!-- grid_column -->
 						</div><!-- grid_container -->
