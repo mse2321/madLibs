@@ -25,6 +25,9 @@ h2 { margin-top: 5px; }
 .grid_column { width: 32%; display: inline-block; }
 .word_select_button, .madlib_button { position: absolute; right: 4.5em; margin-top: 1em; }
 #start_over {right: 45.5em; margin-top: 4em;}
+.slide.ng-hide-add, .slide.ng-hide-remove { transition: 0.5s linear all;}
+.slide {opacity: 1;}
+.slide-ng-hide {opacity: 0;}
 #madLibsStory { padding: 10px 40px; }
 #madLibsStory p { padding: 0px; line-height: 45px; letter-spacing: 0.02em; }
 #madLibsStory span { border-bottom: 1px solid #000; min-width: 100px; background-color: #eee; display: inline-block; height: 25px; padding-bottom: 5px; vertical-align: middle; text-align: center; line-height: 30px; padding-left: 5px; padding-right: 5px; }
@@ -39,22 +42,17 @@ h2 { margin-top: 5px; }
 								$scope.possess_pronoun = 'his';
 								$scope.name = 'Male Name';
 								$scope.words_ui = 'show';
-								$scope.madlibs_ui = 'hidden';
 
 								$scope.change = function() {
-										$scope.pronoun = 'she';
-										$scope.possess_pronoun = 'her';
-										$scope.name = 'Female Name';
+									$scope.pronoun = 'she';
+									$scope.possess_pronoun = 'her';
+									$scope.name = 'Female Name';
 								};
 								$scope.submit = function() {
-										if ( $scope.huge_number > 100 ) {
-													$scope.words_ui = 'hidden';
-													$scope.madlibs_ui = 'show';
-										};
+									$scope.words_ui = 'hidden';
 								};
 								$scope.start_over = function() {
-													$scope.words_ui = 'show';
-													$scope.madlibs_ui = 'hidden';
+									$scope.words_ui = 'show';
 								};
 						});
 		</script>
@@ -99,14 +97,14 @@ h2 { margin-top: 5px; }
 										</ul>
 									</div><!-- grid_column -->
 							</div><!-- grid_container -->
-							<button class="word_select_button" ng-click="submit()">Generate My Mad Lib</button>
+							<button class="word_select_button" ng-click="submit(); bool=true">Generate My Mad Lib</button>
 						</form>
 				</section> <!-- Word Select -->
-				<section id="madLibsStory" class="{{ madlibs_ui }}">
+				<section id="madLibsStory" class="{{ madlibs_ui }} slide" ng-show="bool">
 						<p><span>{{ name }}</span> was a <span>{{ job_title }}</span> who loved technology. Although {{ pronoun }} loved parts of {{ possess_pronoun }} job, she absolutely hated  <span>{{ tedious_task }}</span> and <span>{{ dirty_task }}</span>. So, <span>{{ name }}</span> met with {{ possess_pronoun }} life mentor <span>{{ celebrity }}</span> who told {{ possess_pronoun }} to learn how to <span>{{ useless_skill }}</span> with Thinkful. Thinkful didn't offer a course on <span>{{ useless_skill }}</span> so {{ pronoun }} studied programming instead.</p> 
  
 						<p>What a great decision! With {{ possess_pronoun }} new skills, <span>{{ name }}</span> built a(n) <span>{{ adjective }}</span> robot named <span>{{ obnoxious_celebrity }}</span> that not only loved <span>{{ dirty_task }}</span> but did it <span>{{ huge_number }}</span> times faster.</p>
-						<button id="start_over" class="madlib_button" ng-click="start_over()">Start Over</button>
+						<button id="start_over" class="madlib_button" ng-click="start_over(); bool=false">Start Over</button>
 				</section> <!-- madLibStory -->
 		</div><!-- container -->
 </body>
